@@ -26,17 +26,18 @@ int main() {
                 *ptr_min = temp;
             }
             long long int current = *(ptr_arr + i);
+            long long int *ptr_current = &current;
             long long int product_max = *ptr_max * current;
             long long int product_min = *ptr_min * current;
 
-            if (current > product_max) {
-                *ptr_max = current;
+            if (*ptr_current > product_max) {
+                *ptr_max = *ptr_current;
             } else {
                 *ptr_max = product_max;
             }
 
-            if (current < product_min) {
-                *ptr_min = current;
+            if (*ptr_current < product_min) {
+                *ptr_min = *ptr_current;
             } else {
                 *ptr_min = product_min;
             }
