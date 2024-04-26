@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.sk": "skript",
+        "*.rmd": "markdown",
+        "stdlib.h": "c"
+    }
+}
