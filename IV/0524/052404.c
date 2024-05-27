@@ -52,7 +52,7 @@ int main() {
     int len = 0;
     scanf("%d\n", &len);
     while (len--) {
-        char buffer[100] = "";
+        char buffer[100000] = "";
         gets(buffer);
         for (int j = 0; buffer[j] != '\0'; j++) {
             if (isalpha(buffer[j]) == 0) continue;
