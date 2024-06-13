@@ -22,6 +22,18 @@
                 "isDefault": true
             },
             "detail": "偵錯工具產生的工作。"
+        },
+        {
+            "type": "shell",
+            "label": "刪除所有執行檔",
+            "command": "get-childitem -path ${workspaceFolder} -include *.exe -recurse | remove-item -force -confirm:$false",
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "label": "刪除所有.txt檔案",
+            "command": "get-childitem -path ${workspaceFolder} -include *.txt -recurse | remove-item -force -confirm:$false",
+            "problemMatcher": []
         }
     ],
     "version": "2.0.0"
