@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define INPUT_MAX 10000
+#define INPUT_MAX 1000000
 
 
 void *get_primes(int n, int *primes) {
@@ -11,9 +11,9 @@ void *get_primes(int n, int *primes) {
     }
     primes[0] = 0;
     primes[1] = 0;
-    for (int i = 2; i < n; i++) {
+    for (long int i = 2; i < n; i++) {
         if (primes[i] == 1) {
-            for (int j = i * i; j < n; j += i) {
+            for (unsigned long int j = i * i; j < n; j += i) {
                 primes[j] = 0;
             }
         }
